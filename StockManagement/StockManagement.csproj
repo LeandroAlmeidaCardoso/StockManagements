@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StockManagement.Common.Data\StockManagement.Common.Data.csproj" />
+    <ProjectReference Include="..\StockManagement.Common.Domain\StockManagement.Common.Domain.csproj" />
+    <ProjectReference Include="..\StockManagement.Common.Redis\StockManagement.Common.Redis.csproj" />
+    <ProjectReference Include="..\StockManagement.Ioc\StockManagement.Ioc.csproj" />
+  </ItemGroup>
+
+</Project>
