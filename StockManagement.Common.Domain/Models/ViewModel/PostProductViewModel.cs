@@ -7,21 +7,20 @@ namespace StockManagement.Common.Domain.Models.ViewModel
     {
         public string? Id { get; set; } = Guid.NewGuid().ToString();
 
-        [Required(ErrorMessageResourceName = "RequiredProp", ErrorMessage = "o campo deve ser diferente de nulo")]
+        [Required(ErrorMessage = "o campo deve ser diferente de nulo")]
         public string? StorageId { get; set; }
 
-        [Required(ErrorMessageResourceName = "RequiredProp", ErrorMessage = "o campo deve ser diferente de nulo")]
+        [Required(ErrorMessage = "o campo deve ser diferente de nulo")]
         public string? Name { get; set; }
 
-        [Required(ErrorMessageResourceName = "RequiredProp", ErrorMessage = "o campo deve ser diferente de nulo")]
-        [Range(0, double.MaxValue, ErrorMessageResourceName = "InvalidProp",
-        ErrorMessage = "o campo deve ser diferente de nulo")]
+        [Required(ErrorMessage = "o campo deve ser diferente de nulo")]
+        [Range(0, double.MaxValue, ErrorMessage = "o campo nao pode ser negativo")]
         public decimal Quantity { get; set; }
 
-        [Required(ErrorMessageResourceName = "RequiredProp", ErrorMessage = "o campo deve ser diferente de nulo")]
+        [Required(ErrorMessage = "o campo deve ser diferente de nulo")]
         public decimal? Size { get; set; }
 
-        [Required(ErrorMessageResourceName = "RequiredProp", ErrorMessage = "o campo deve ser diferente de nulo")]
+        [Required(ErrorMessage = "o campo deve ser diferente de nulo")]
         public decimal? Width { get; set; }
        
         [JsonIgnore]
@@ -29,5 +28,10 @@ namespace StockManagement.Common.Domain.Models.ViewModel
         
         [JsonIgnore]
         public DateTime? UpdateDate { get; set; } = DateTime.Now;
+
+        public PostProductViewModel Clone()
+        {
+            return (PostProductViewModel)this.MemberwiseClone();
+        }
     }
 }

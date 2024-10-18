@@ -5,7 +5,7 @@ using StockManagement.Common.Domain.Models.ViewModel;
 
 #endregion
 
-namespace ConferenciaLoja.Ioc.Mappers;
+namespace StockManagement.Ioc.Mappers;
 
 public class ViewModelsProfiles : Profile
 {

@@ -1,7 +1,7 @@
 #region
 
 using AutoMapper;
-using ConferenciaLoja.Ioc.Mappers;
+using StockManagement.Ioc.Mappers;
 using Microsoft.Extensions.DependencyInjection;
 
 #endregion
