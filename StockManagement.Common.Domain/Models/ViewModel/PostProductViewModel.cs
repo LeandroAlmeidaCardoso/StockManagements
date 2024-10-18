@@ -5,12 +5,10 @@ namespace StockManagement.Common.Domain.Models.ViewModel
 {
     public class PostProductViewModel
     {
-        public long? Id { get; set; }
+        public string? Id { get; set; } = Guid.NewGuid().ToString();
 
         [Required(ErrorMessageResourceName = "RequiredProp", ErrorMessage = "o campo deve ser diferente de nulo")]
-        [Range(1, double.MaxValue, ErrorMessageResourceName = "InvalidProp",
-        ErrorMessage = "o campo deve ser maior que 0")]
-        public long? StorageId { get; set; }
+        public string? StorageId { get; set; }
 
         [Required(ErrorMessageResourceName = "RequiredProp", ErrorMessage = "o campo deve ser diferente de nulo")]
         public string? Name { get; set; }

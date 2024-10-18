@@ -21,7 +21,7 @@ public static class Redis
             ConnectTimeout = 60000,// config
             DefaultDatabase = 0, // config
             EndPoints = new EndPointCollection
-                {$"localhost:6379"}, // config
+                {$"127.0.0.1:6379"}, // config
             Password = "",
             ReconnectRetryPolicy = new ExponentialRetry(5000, 15000),
             SyncTimeout = 60000,
